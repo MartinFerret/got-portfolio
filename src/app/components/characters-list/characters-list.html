@@ -1,1 +1,16 @@
-<p>characters-list works!</p>
+@if (charactersFromParent.length > 0) {
+  <div class="characters-wrapper">
+    <!--  @for pour itérer sur notre tableau charactersFromApi-->
+    <!--  track OBLIGATOIRE pour éviter les pertes de performances / rattacher à une propriété unique.-->
+    @for (character of charactersFromParent; track character.id) {
+      <div class="character-card">
+        <h1>{{ character.fullName }}</h1>
+        <p>{{ character.title }}</p>
+        <strong>{{ character.family }}</strong>
+      </div>
+    }
+  </div>
+} @else {
+  <p>No characters found</p>
+}
+
