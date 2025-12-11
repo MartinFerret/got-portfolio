@@ -1,29 +1,38 @@
-# Commandes de base
+# 🧙 Commandes de base
 
-Création d'un projet Angular :  `ng new <my-app>`
-Lançement du serveur : `ng serve`
-Génération d'un composant : `ng generate component <component-name>`
+- Création d'un projet Angular :  `ng new <my-app>`
+- Voir ce que nous permet de faire l'Angular CLI : `ng --help`
+- Lançement du serveur : `ng serve`
+- Génération d'un composant : `ng generate component <component-name>` ou `ng g c <component-name>`
+- Génération d'un service : `ng generate service <service-name>` ou `ng g s <service-name>`
 
-# Architecture
+# 🏠 Architecture
 
-Mettre photo
+<details closed>
+<summary>Voir notre architecture</summary>
 
-# Concepts Observables
+![Architecture](./public/architecture.png)
 
-# Fonctionnement de notre site
+</details>
+
+# 🔥 Concepts RxJs
+
+- Observable - [RxJs - Observable](https://rxjs.dev/guide/observable)
+- Subscription - [RxJs - Subscribe](https://rxjs.dev/guide/subscription)
+
+# ⚙️ Fonctionnement de notre site
 
 A développer
 
 ## Homepage
 
 - Liste de tous les personnages.
-- De ces personnages : Une image, le fullname, et le titre.
-- De mettre une barre de recherche : par titre, par nom, par famille.
-- Au click sur un personnage, on affiche ses informations.
+- De ces personnages , on afficher toutes leurs propriétés.
+- Une barre de recherche présente pour filtrer nos personnages.
+- Au click sur un personnage depuis l'accueil, on arrive sur la page du personnage.
 
 Base URL : https://thronesapi.com/api/v2/Characters
 
-# Exo
+# 🧪 Les TP's
 
-1. Depuis le parent (app) - Déclarer une nouvelle variable (avec la valeur que vous voulez).
-2. Transmettez cette valeur via @Input au composant enfant (character-list)
+1. Allez au fichier [TP-1.md](TP-1.md)
