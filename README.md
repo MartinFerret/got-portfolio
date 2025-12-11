@@ -36,3 +36,4 @@ Base URL : https://thronesapi.com/api/v2/Characters
 # 🧪 Les TP's
 
 1. Allez au fichier [TP-1.md](TP-1.md)
+2. Allez au fichier [TP-2.md](TP-2.md)
