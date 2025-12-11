@@ -22,11 +22,19 @@ export class App implements OnInit {
   // On stock tous les personnages dans un tableau.
   protected charactersToGiveToChild!: Characters[];
   protected continentsToGiveToChild!: Continents[];
+  protected filteredCharacters!: Characters[];
 
   // On subscribe() uniquement sur les Observables.
   ngOnInit() {
     this.getCharactersInTemplate();
     this.getAllContinentsInTemplate();
+  }
+
+  protected onSearch(term: string) : void {
+    this.filteredCharacters = this.charactersToGiveToChild.filter((character: Characters) => {
+      const fullName = character.fullName ?? '';
+      return fullName.toLowerCase().includes(term.toLowerCase())
+    })
   }
 
   private getAllContinentsInTemplate () {
@@ -39,6 +47,7 @@ export class App implements OnInit {
   private getCharactersInTemplate () {
     this.charactersService.getCharacters().subscribe((charactersFromApi: Characters[]) => {
       this.charactersToGiveToChild = charactersFromApi;
+      this.filteredCharacters = charactersFromApi;
       this.cdr.detectChanges();
     })
   }

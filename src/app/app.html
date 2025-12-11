@@ -1,4 +1,6 @@
+<input #searchInput type="text" placeholder="Chercher un personnage" (input)="onSearch(searchInput.value)" >
+
 <app-continents-list [continentsFromParent]="continentsToGiveToChild"/>
-<app-characters-list [charactersFromParent]="charactersToGiveToChild" />
+<app-characters-list [charactersFromParent]="filteredCharacters" />
 
 <router-outlet />
