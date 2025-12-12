@@ -6,10 +6,11 @@ import {Characters} from './shared/models/characters.model';
 import {ContinentsService} from './shared/services/continents-service';
 import {Continents} from './shared/models/continents.model';
 import {ContinentsList} from './components/continents-list/continents-list';
+import {NgClass, NgStyle} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CharactersList, ContinentsList],
+  imports: [RouterOutlet, CharactersList, ContinentsList, NgClass, NgStyle],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
