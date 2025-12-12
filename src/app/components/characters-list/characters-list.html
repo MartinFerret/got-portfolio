@@ -40,7 +40,7 @@
               <div class="character-card__meta">
                 <div class="character-card__meta-row">
                   <span class="character-card__meta-label">First name</span>
-                  <span class="character-card__meta-value">{{ character.firstName | slugify }}</span>
+                  <span class="character-card__meta-value">{{ character.firstName | slugify  }}</span>
                 </div>
                 <div class="character-card__meta-row">
                   <span class="character-card__meta-label">Last name</span>
@@ -50,7 +50,7 @@
                 @if (character.fullName) {
                   <div class="character-card__meta-row">
                     <span class="character-card__meta-label">Full name</span>
-                    <span class="character-card__meta-value">{{ character.fullName }}</span>
+                    <span class="character-card__meta-value">{{ character.fullName  | suffix: '⚔️' }}</span>
                   </div>
                 }
               </div>
