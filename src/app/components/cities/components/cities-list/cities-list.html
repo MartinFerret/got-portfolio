@@ -1,31 +1,37 @@
-<div [formGroup]="cityForm">
-  <input type="text"
-    name="name"
-    placeholder="Nom de la ville"
-    formControlName="name"
-  />
-  <input type="number"
-    name="inhabitants"
-    placeholder="Nombre d'habitants"
-    formControlName="inhabitants"
-  />
-  <input type="text"
-   name="typicalDish"
-   placeholder="Spécialité culinaire"
-   formControlName="typicalDish"
-  />
-  <input type="text"
-   name="currency"
-   placeholder="Monnaie"
-   formControlName="currency"
-  />
-  <input type="text"
-   name="flag"
-   placeholder="Drapeau"
-   formControlName="flag"
-  />
-  <button (click)="addCity()" >Add City</button>
-</div>
+<button class="button--add-form" (click)="displayAddCityForm()">
+  {{ displayCityForm ? 'Fermer le formulaire' : 'Ajouter une ville'}}
+</button>
+
+@if (displayCityForm) {
+  <div [formGroup]="cityForm">
+    <input type="text"
+           name="name"
+           placeholder="Nom de la ville"
+           formControlName="name"
+    />
+    <input type="number"
+           name="inhabitants"
+           placeholder="Nombre d'habitants"
+           formControlName="inhabitants"
+    />
+    <input type="text"
+           name="typicalDish"
+           placeholder="Spécialité culinaire"
+           formControlName="typicalDish"
+    />
+    <input type="text"
+           name="currency"
+           placeholder="Monnaie"
+           formControlName="currency"
+    />
+    <input type="text"
+           name="flag"
+           placeholder="Drapeau"
+           formControlName="flag"
+    />
+    <button (click)="addCity()">Add City</button>
+  </div>
+}
 
 <div class="cities">
   @for (city of citiesFromParent; track city.id) {
