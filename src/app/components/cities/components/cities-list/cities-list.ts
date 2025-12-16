@@ -16,7 +16,7 @@ export class CitiesList {
   @Input() citiesFromParent : CitiesModel[] = [];
   @Output() cityCreated = new EventEmitter<CitiesModel>();
 
-  protected displayCityForm = false;
+  public displayCityForm = false;
 
   protected cityForm = new FormGroup ({
     name: new FormControl<string>('', [Validators.required, Validators.minLength(3)]),
